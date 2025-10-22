@@ -13,18 +13,18 @@ Me interesa aplicar herramientas de análisis de datos, modelamiento y automatiz
 
 ---
 
-## 📁 Estructura del portafolio
+<!--## 📁 Estructura del portafolio
 
 | Carpeta | Contenido | Descripción |
 |----------|------------|-------------|
 | `/python-projects` | Notebooks o scripts de Python | Proyectos de análisis, limpieza o scraping de datos |
 | `/powerbi-dashboards` | Archivos `.pbix` o capturas + PDFs | Dashboards creados en Power BI |
 | `/excel-tools` | Hojas de cálculo con fórmulas o dashboards | Ejemplos de automatización o análisis con Excel |
-| `/docs` | CV y documentación adicional | Versión PDF del CV u otros certificados |
+| `/docs` | CV y documentación adicional | Versión PDF del CV u otros certificados |-->
 
 ---
 
-## 🚀 Proyectos Destacados
+<!--## 🚀 Proyectos Destacados
 
 ### 1️⃣ **Análisis de Ventas – Power BI**
 **Herramientas:** Power BI, Excel  
@@ -32,32 +32,32 @@ Me interesa aplicar herramientas de análisis de datos, modelamiento y automatiz
 Incluye medidas DAX básicas, segmentadores y visualización de KPIs.  
 **Archivo:** [`/powerbi-dashboards/analisis_ventas.pbix`](powerbi-dashboards/analisis_ventas.pbix)  
 **Vista previa:**  
-![Captura del dashboard](powerbi-dashboards/captura_ventas.png)
+![Captura del dashboard](powerbi-dashboards/captura_ventas.png)-->
 
 ---
 
-### 2️⃣ **Limpieza y Análisis Exploratorio de Datos (Python)**
+<!--### 2️⃣ **Limpieza y Análisis Exploratorio de Datos (Python)**
 **Herramientas:** Python (pandas, numpy, matplotlib)  
 **Descripción:** Limpieza, exploración y visualización de un dataset público (por ejemplo, precios de productos o datos demográficos).  
 **Archivo:** [`/python-projects/data_cleaning.ipynb`](python-projects/data_cleaning.ipynb)  
 **Resultados:**  
 - Gráficos de distribución y correlaciones  
 - Resumen de estadísticas descriptivas  
-- Recomendaciones basadas en los hallazgos  
+- Recomendaciones basadas en los hallazgos  -->
 
 ---
 
-### 3️⃣ **Herramienta de Automatización en Excel**
+<!--### 3️⃣ **Herramienta de Automatización en Excel**
 **Herramientas:** Excel avanzado (tablas dinámicas, fórmulas, validación)  
 **Descripción:** Archivo diseñado para organizar y resumir información de forma automatizada.  
-**Archivo:** [`/excel-tools/resumen_ventas.xlsx`](excel-tools/resumen_ventas.xlsx)
+**Archivo:** [`/excel-tools/resumen_ventas.xlsx`](excel-tools/resumen_ventas.xlsx)-->
 
 ---
 
 ## 📫 Contacto
 - 📧 rvega.gut@gmail.com  
 - 🌍 Parral, Chile  
-- 💼 [LinkedIn (opcional si tienes)](https://www.linkedin.com/)  
+<!-- 💼 [LinkedIn (opcional si tienes)](https://www.linkedin.com/)-->
 
 ---
 
