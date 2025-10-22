@@ -11,4 +11,4 @@ Este archivo corresponde al **ejercicio final** del curso *“Herramientas de ma
 - Tablas dinámicas y gráficos.  
 - Validaciones y formato condicional.  
 
-<!--📎 Archivo: [`analisis_datos_excel_avanzado_PUC.xlsx`](analisis_datos_excel_avanzado_PUC.xlsx)-->
+📎 Archivo: [`analisis_datos_excel_avanzado_PUC.xlsx`](analisis_datos_excel_avanzado_PUC.xlsx)
