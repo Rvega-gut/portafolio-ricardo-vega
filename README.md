@@ -47,10 +47,10 @@ Incluye medidas DAX básicas, segmentadores y visualización de KPIs.
 
 ---
 
-<!--### 3️⃣ **Herramienta de Automatización en Excel**
+### 3️⃣ **Herramienta de Automatización en Excel**
 **Herramientas:** Excel avanzado (tablas dinámicas, fórmulas, validación)  
 **Descripción:** Archivo diseñado para organizar y resumir información de forma automatizada.  
-**Archivo:** [`/excel-tools/resumen_ventas.xlsx`](excel-tools/resumen_ventas.xlsx)-->
+**Archivo:** [`/Excel/analisis_datos_excel_avanzado_PUC.xlsx`](/Excel/analisis_datos_excel_avanzado_PUC.xlsx)
 
 ---
 
