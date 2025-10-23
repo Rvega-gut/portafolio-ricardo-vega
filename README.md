@@ -1,6 +1,6 @@
 # Ricardo Vega Gutiérrez – Data & Analytics Portfolio
 
-👋 Hola, soy **Ricardo Vega**, Ingeniero Civil Matemático titulado de la Universidad de Concepción (Chile).  
+👋 Hola! soy **Ricardo Vega**, Ingeniero Civil Matemático titulado de la Universidad de Concepción, Chile.  
 Me interesa aplicar herramientas de análisis de datos, modelamiento y automatización para generar información útil y respaldar la toma de decisiones.
 
 ---
@@ -13,22 +13,24 @@ Me interesa aplicar herramientas de análisis de datos, modelamiento y automatiz
 
 ---
 
-<!--## 📁 Estructura del portafolio
+## 📁 Estructura del portafolio
 
 | Carpeta | Contenido | Descripción |
 |----------|------------|-------------|
-| `/python-projects` | Notebooks o scripts de Python | Proyectos de análisis, limpieza o scraping de datos |
-| `/powerbi-dashboards` | Archivos `.pbix` o capturas + PDFs | Dashboards creados en Power BI |
-| `/excel-tools` | Hojas de cálculo con fórmulas o dashboards | Ejemplos de automatización o análisis con Excel |
-| `/docs` | CV y documentación adicional | Versión PDF del CV u otros certificados |-->
+| `/Python` | Notebooks o scripts de Python | Proyectos de análisis, limpieza o scraping de datos |
+| `/PowerBI` | Archivos `.pbix` | Dashboards creados en Power BI |
+| `/Excel` | Hojas de cálculo con fórmulas o dashboards | Ejemplos de análisis realizados con Excel |
+| `/Documentos` | CV y documentación adicional | Versión PDF del CV u otros certificados |
 
 ---
 
  🚀 Proyectos Destacados
 
-### 📊 Power BI – Proyecto Final (PUC Chile)
-Dashboard interactivo que muestra ventas, cobros y deudas mediante diferentes visualizaciones.  
-[Ver proyecto →](PowerBI/analisis_datos_PowerBI_PUC.pbix)
+### 1️⃣ **Análisis de Ventas – Power BI**
+**Herramientas:** Power BI, Excel  
+**Descripción:** Dashboard interactivo para explorar y visualizar datos de ventas por región, categoría y cliente.  
+Incluye medidas DAX básicas, segmentadores y visualización de KPIs.  
+**Archivo:** [`/PowerBI/analisis_datos_PowerBI_PUC.pbix`](PowerBI/analisis_datos_PowerBI_PUC.pbix)
 
 ---
 
@@ -43,7 +45,7 @@ Dashboard interactivo que muestra ventas, cobros y deudas mediante diferentes vi
 
 ---
 
-### 3️⃣ **Herramienta de Automatización en Excel**
+### 3️⃣ **Análisis y Reporte en Excel Avanzado**
 **Herramientas:** Excel avanzado (tablas dinámicas, fórmulas, validación)  
 **Descripción:** Archivo diseñado para organizar y resumir información de forma automatizada.  
 **Archivo:** [`/Excel/analisis_datos_excel_avanzado_PUC.xlsx`](/Excel/analisis_datos_excel_avanzado_PUC.xlsx)
