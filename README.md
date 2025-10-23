@@ -24,15 +24,11 @@ Me interesa aplicar herramientas de análisis de datos, modelamiento y automatiz
 
 ---
 
-<!--## 🚀 Proyectos Destacados
+ 🚀 Proyectos Destacados
 
-### 1️⃣ **Análisis de Ventas – Power BI**
-**Herramientas:** Power BI, Excel  
-**Descripción:** Dashboard interactivo para explorar datos de ventas por región, categoría y cliente.  
-Incluye medidas DAX básicas, segmentadores y visualización de KPIs.  
-**Archivo:** [`/powerbi-dashboards/analisis_ventas.pbix`](powerbi-dashboards/analisis_ventas.pbix)  
-**Vista previa:**  
-![Captura del dashboard](powerbi-dashboards/captura_ventas.png)-->
+### 📊 Power BI – Proyecto Final (PUC Chile)
+Dashboard interactivo que muestra ventas, cobros y deudas mediante diferentes visualizaciones.  
+[Ver proyecto →](PowerBI/analisis_datos_PowerBI_PUC.pbix)
 
 ---
 
