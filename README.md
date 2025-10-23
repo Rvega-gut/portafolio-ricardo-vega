@@ -12,7 +12,7 @@ Incluye ejercicios de funciones avanzadas, tablas dinámicas, validaciones y das
 **Proyecto destacado:**  
 > **Análisis y reporte en Excel avanzado (PUC Chile)**  
 > Uso de fórmulas anidadas, tablas dinámicas y formato condicional para generar reportes automatizados.  
-> 📎 [Ver archivo](Excel/examen_final_excel_avanzado_PUC.xlsx)
+> 📎 [Ver archivo](Excel/analisis_datos_excel_avanzado_PUC.xlsx)
 
 ---
 
