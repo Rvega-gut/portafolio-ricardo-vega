@@ -1,64 +1,35 @@
-# Ricardo Vega Gutiérrez – Data & Analytics Portfolio
+# 📂 Portafolio de Análisis de Datos – Ricardo Vega
 
-👋 Hola! soy **Ricardo Vega**, Ingeniero Civil Matemático titulado de la Universidad de Concepción, Chile.  
-Me interesa aplicar herramientas de análisis de datos, modelamiento y automatización para generar información útil y respaldar la toma de decisiones.
-
----
-
-## 🧠 Sobre mí
-- 🎓 Ingeniero Civil Matemático (UdeC, 2019–2025)
-- 💻 Experiencia con **Python (pandas, numpy, sklearn, tensorflow, bs4)** y **SQL básico**
-- 📊 Conocimientos en **Power BI (nivel básico)** y **Excel avanzado**
-- 🌱 Actualmente fortaleciendo mis habilidades en ingeniería de datos y visualización.
+Este repositorio reúne proyectos desarrollados con **Excel**, **Power BI** y **Python**, enfocados en el análisis, procesamiento y visualización de datos.  
+Cada carpeta contiene proyectos aplicados y material complementario a mi formación como Ingeniero Civil Matemático.
 
 ---
 
-## 📁 Estructura del portafolio
+## 🧮 Excel
 
-| Carpeta | Contenido | Descripción |
-|----------|------------|-------------|
-| `/Python` | Notebooks o scripts de Python | Proyectos de análisis, limpieza o scraping de datos |
-| `/PowerBI` | Archivos `.pbix` | Dashboards creados en Power BI |
-| `/Excel` | Hojas de cálculo con fórmulas o dashboards | Ejemplos de análisis realizados con Excel |
-| `/Documentos` | CV y documentación adicional | Versión PDF del CV u otros certificados |
+Incluye ejercicios de funciones avanzadas, tablas dinámicas, validaciones y dashboards.
 
----
-
- 🚀 Proyectos Destacados
-
-### 1️⃣ **Análisis de Ventas – Power BI**
-**Herramientas:** Power BI, Excel  
-**Descripción:** Dashboard interactivo para explorar y visualizar datos de ventas por región, categoría y cliente.  
-Incluye medidas DAX básicas, segmentadores y visualización de KPIs.  
-**Archivo:** [`/PowerBI/analisis_datos_PowerBI_PUC.pbix`](PowerBI/analisis_datos_PowerBI_PUC.pbix)
+**Proyecto destacado:**  
+> **Análisis y reporte en Excel avanzado (PUC Chile)**  
+> Uso de fórmulas anidadas, tablas dinámicas y formato condicional para generar reportes automatizados.  
+> 📎 [Ver archivo](Excel/examen_final_excel_avanzado_PUC.xlsx)
 
 ---
 
-<!--### 2️⃣ **Limpieza y Análisis Exploratorio de Datos (Python)**
-**Herramientas:** Python (pandas, numpy, matplotlib)  
-**Descripción:** Limpieza, exploración y visualización de un dataset público (por ejemplo, precios de productos o datos demográficos).  
-**Archivo:** [`/python-projects/data_cleaning.ipynb`](python-projects/data_cleaning.ipynb)  
-**Resultados:**  
-- Gráficos de distribución y correlaciones  
-- Resumen de estadísticas descriptivas  
-- Recomendaciones basadas en los hallazgos  -->
+## 📊 Power BI
+
+Proyectos desarrollados con **Microsoft Power BI**, centrados en modelamiento de datos, uso de DAX y visualización interactiva.
+
+**Proyecto destacado:**  
+> **Dashboard final – Power BI: Herramientas básicas para el análisis de datos (PUC Chile)**  
+> Integración de múltiples fuentes, creación de medidas DAX y diseño de tres páginas de visualización (ventas, cobros y deudas).  
+> 📎 [Ver archivo](PowerBI/analisis_datos_PowerBI_PUC.pbix)
 
 ---
 
-### 3️⃣ **Análisis y Reporte en Excel Avanzado**
-**Herramientas:** Excel avanzado (tablas dinámicas, fórmulas, validación)  
-**Descripción:** Archivo diseñado para organizar y resumir información de forma automatizada.  
-**Archivo:** [`/Excel/analisis_datos_excel_avanzado_PUC.xlsx`](/Excel/analisis_datos_excel_avanzado_PUC.xlsx)
+## 🐍 Python
+
+Proyectos enfocados en el manejo y análisis de datos con **Python**.  
+
 
 ---
-
-## 📫 Contacto
-- 📧 rvega.gut@gmail.com  
-- 🌍 Parral, Chile  
-<!-- 💼 [LinkedIn (opcional si tienes)](https://www.linkedin.com/)-->
-
----
-
-### ⚙️ Cómo se desarrolló este portafolio
-Este repositorio muestra algunos de los proyectos realizados durante mi formación y prácticas profesionales.  
-Incluye ejemplos aplicados a análisis de datos, visualización y automatización, con el objetivo de demostrar mi capacidad para trabajar con herramientas diversas y adaptarme a nuevos desafíos tecnológicos.
