@@ -1,4 +1,4 @@
-# 📂 Portafolio de Análisis de Datos – Ricardo Vega
+# 📂 Portafolio de Análisis de Datos 
 
 Este repositorio reúne proyectos desarrollados con **Excel**, **Power BI** y **Python**, enfocados en el análisis, procesamiento y visualización de datos.  
 Cada carpeta contiene proyectos aplicados y material complementario a mi formación como Ingeniero Civil Matemático.
