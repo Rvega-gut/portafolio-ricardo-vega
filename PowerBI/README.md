@@ -1,10 +1,6 @@
-# 📊 Proyectos en Power BI
+# 📊 Power BI
 
-En esta carpeta se incluyen proyectos desarrollados con **Microsoft Power BI**, enfocados en el análisis, modelamiento y visualización de datos.
+**Dashboard final – Power BI: Herramientas básicas para el análisis de datos (PUC Chile)**  
+Integración de múltiples fuentes, creación de medidas DAX y diseño de tres páginas de visualización (ventas, cobros y deudas).
 
-Los archivos muestran el uso de **Power Query** para la limpieza y transformación de datos, **DAX** para la creación de medidas y columnas calculadas, y **visualizaciones interactivas** para la exploración de información.
-
-## 📘 Ejemplo destacado
-**Proyecto final del curso:** *“Power BI: Herramientas básicas para el análisis de datos”* – Pontificia Universidad Católica de Chile (PUC).
-
-📎 Archivo: [`analisis_datos_PowerBI_PUC.pbix`](analisis_datos_PowerBI_PUC.pbix)
+📎 [Ver archivo](https://github.com/Rvega-gut/portafolio-ricardo-vega/blob/main/PowerBI/analisis_datos_PowerBI_PUC.pbix)
