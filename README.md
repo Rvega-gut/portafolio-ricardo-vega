@@ -29,7 +29,14 @@ Proyectos desarrollados con **Microsoft Power BI**, centrados en modelamiento de
 
 ## 🐍 Python
 
-Proyectos enfocados en el manejo y análisis de datos con **Python**.  
+Proyectos desarrollados con **Python**, enfocados en el análisis, limpieza y modelamiento predictivo de datos.
+
+**Proyecto destacado:**
+
+> **Predicción de reinserción hospitalaria en pacientes con diabetes**  
+> Análisis exploratorio y modelo predictivo sobre el dataset *Diabetes 130-US Hospitals* (UCI Machine Learning Repository).
+> Incluye limpieza de datos, transformación de variables, selección estadística de features y comparación de modelos de clasificación.  
+> 📎 [Ver notebook](https://github.com/Rvega-gut/portafolio-ricardo-vega/blob/main/Python/Reingresión%20Hospitalaria.ipynb)
 
 
 ---
