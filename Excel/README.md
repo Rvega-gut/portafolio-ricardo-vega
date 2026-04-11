@@ -1,14 +1,8 @@
-# 🧮 Proyectos en Excel
+# 🧮 Excel
 
-En esta carpeta se incluyen ejemplos de uso de **Microsoft Excel** para análisis de datos, reportes automatizados y visualización básica.
+**Análisis y reporte en Excel avanzado (PUC Chile)**  
+Uso de fórmulas anidadas, tablas dinámicas y formato condicional para generar reportes automatizados.
 
-## 📁 Proyecto destacado
-### Análisis y Reporte en Excel Avanzado (PUC Chile)
-Este archivo corresponde al **ejercicio final** del curso *“Herramientas de manejo avanzado de la planilla de cálculo Excel para Windows”* impartido por la **Pontificia Universidad Católica de Chile**.
+📎 [Ver archivo](https://github.com/Rvega-gut/portafolio-ricardo-vega/blob/main/Excel/analisis_datos_excel_avanzado_PUC.xlsx)
 
-**Contiene:**
-- Uso de fórmulas avanzadas y referencias mixtas.  
-- Tablas dinámicas y gráficos.  
-- Validaciones y formato condicional.  
-
-📎 Archivo: [`analisis_datos_excel_avanzado_PUC.xlsx`](analisis_datos_excel_avanzado_PUC.xlsx)
+README carpeta PowerBI (/PowerBI/README.md):
