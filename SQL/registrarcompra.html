@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Añadir Factura y Productos</title>
+</head>
+<body>
+    <h1>Añadir Factura y Productos</h1>
+    <form action="/add_compra" method="POST">
+        <label>Número de Factura:</label>
+        <input type="text" name="numero_factura"><br><br>
+        
+        <label>Fecha de Compra:</label>
+        <input type="date" name="fecha_compra"><br><br>
+        
+        <label>Proveedor:</label>
+        <select name="proveedor">
+            {% for proveedor in proveedores %}
+            <option value="{{ proveedor }}">{{ proveedor }}</option>
+            {% endfor %}
+        </select><br><br>
+        
+        <label>Cantidad de Productos Comprados:</label>
+        <input type="number" name="cantidad_productos" id="cantidad_productos" min="1"><br><br>
+        
+        <div id="productos_container"></div>
+        
+        <button type="submit">Añadir Factura</button>
+    </form>
+
+    <script>
+        document.getElementById("cantidad_productos").addEventListener("change", function() {
+            var cantidad = parseInt(this.value);
+            var productosContainer = document.getElementById("productos_container");
+            
+            // Limpiar el contenedor de productos
+            productosContainer.innerHTML = "";
+            
+            // Generar los campos de entrada para cada producto
+            for (var i = 1; i <= cantidad; i++) {
+                var productoDiv = document.createElement("div");
+                
+                var productoHeader = document.createElement("h3");
+                productoHeader.textContent = "Producto " + str(i);
+                productoDiv.appendChild(productoHeader);
+
+                var labelnombre = document.createElement("label");
+                labelnombre.textContent = "nombre del producto:";
+                productoDiv.appendChild(labelnombre);
+                
+                var nombreInput = document.createElement("input");
+                nombreInput.type = "text";
+                nombreInput.name = "nombre_" + str(i);
+                productoDiv.appendChild(nombreInput);
+                
+                var labelCompra = document.createElement("label");
+                labelCompra.textContent = "Precio de Compra:";
+                productoDiv.appendChild(labelCompra);
+                
+                var precioCompraInput = document.createElement("input");
+                precioCompraInput.type = "number";
+                precioCompraInput.name = "precio_compra_" + str(i);
+                productoDiv.appendChild(precioCompraInput);
+                
+                var labelVenta = document.createElement("label");
+                labelVenta.textContent = "Precio de Venta:";
+                productoDiv.appendChild(labelVenta);
+                
+                var precioVentaInput = document.createElement("input");
+                precioVentaInput.type = "number";
+                precioVentaInput.name = "precio_venta_" + str(i);
+                productoDiv.appendChild(precioVentaInput);
+                
+                var labelCantidad = document.createElement("label");
+                labelCantidad.textContent = "Cantidad:";
+                productoDiv.appendChild(labelCantidad);
+                
+                var cantidadInput = document.createElement("input");
+                cantidadInput.type = "number";
+                cantidadInput.name = "cantidad_" + str(i);
+                productoDiv.appendChild(cantidadInput);
+                
+                productosContainer.appendChild(productoDiv);
+            }
+        });
+    </script>
+</body>
+</html>

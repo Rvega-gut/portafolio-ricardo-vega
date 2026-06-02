@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo de Utilidades</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+    <h1>Cálculo de Utilidades</h1>
+    <div class="search-bar">
+        <label for="fecha-inicio">Fecha de inicio:</label>
+        <input type="text" id="fecha-inicio" class="datepicker" placeholder="Seleccionar fecha">
+    </div>
+    <div class="search-bar">
+        <label for="fecha-termino">Fecha de término:</label>
+        <input type="text" id="fecha-termino" class="datepicker" placeholder="Seleccionar fecha">
+    </div>
+    <div id="utilidades-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $(".datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                showButtonPanel: true,
+                beforeShow: function(input, inst) {
+                    setTimeout(function() {
+                        var buttonPane = $(input)
+                            .datepicker("widget")
+                            .find(".ui-datepicker-buttonpane");
+
+                        $("<button>", {
+                            text: "Limpiar",
+                            click: function() {
+                                $(input).val("");
+                                $(input).datepicker("hide");
+                            }
+                        }).appendTo(buttonPane);
+                    }, 1);
+                }
+            });
+
+            $(".datepicker").on("change", function() {
+                var fechaInicio = $("#fecha-inicio").val();
+                var fechaTermino = $("#fecha-termino").val();
+
+                if (fechaInicio && fechaTermino) {
+                    calcularUtilidades(fechaInicio, fechaTermino);
+                }
+            });
+        });
+
+        function calcularUtilidades(fechaInicio, fechaTermino) {
+            $.ajax({
+                url: "/calcular_utilidades",
+                type: "GET",
+                data: {
+                    fechaInicio: fechaInicio,
+                    fechaTermino: fechaTermino
+                },
+                success: function(response) {
+                    var utilidades = response.utilidades;
+                    $("#utilidades-container").text("Utilidades totales: " + utilidades);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

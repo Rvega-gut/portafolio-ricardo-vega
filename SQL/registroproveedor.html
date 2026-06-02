@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Registro de Nuevos Proveedores</h1>
+<div class="row">
+    <div class="col-md-5">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages%}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="card card-body">
+            <form action="/anadir_proveedor" method="POST">
+                <div class="form-group">
+                    <input type="text" name="RUTProveedor" placeholder="RUT del proveedor" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Nombre" placeholder="Nombre del proveedor" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="direccion" placeholder="Dirección del proveedor" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="correoelectronico" placeholder="Correo electrónico del proveedor" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="telefono" placeholder="Teléfono del proveedor" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="sumbit" class="btn btn-primary btn-block">
+                        Añadir
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventario</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table thead th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tbody td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventario</h1>
+    <input type="text" id="buscar" placeholder="Buscar producto" oninput="buscarProductos()" list="opciones-productos">
+    <datalist id="opciones-productos"></datalist>
+    <button onclick="buscarProductos()">Buscar</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad Actual</th>
+                <th>Precio de Venta</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-inventario">
+            {% for producto in inventario %}
+            <tr>
+                <td>{{ producto[0] }}</td>
+                <td>{{ producto[1] }}</td>
+                <td>{{ producto[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function buscarProductos() {
+            var nombreProducto = document.getElementById("buscar").value;
+            var url = "/buscar_productos?nombre_producto=" + encodeURIComponent(nombreProducto);
+    
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    var productos = data.productos;
+                    var datalist = document.getElementById("opciones-productos");
+                    datalist.innerHTML = "";
+    
+                    var uniqueProductos = [...new Set(productos)]; // Filtrar valores duplicados
+    
+                    for (var i = 0; i < uniqueProductos.length; i++) {
+                        var option = document.createElement("option");
+                        option.value = uniqueProductos[i];
+                        datalist.appendChild(option);
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+    </script>
+    
+</body>
+</html>

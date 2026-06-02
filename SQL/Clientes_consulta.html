@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Clientes</title>
+    <style>
+        body {
+            background-color: #E6B9EB ;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+            height: auto;
+        }
+        .button-container {
+    display: flex;
+    justify-content: flex-start; /* Alinear el botón a la izquierda */
+    align-items: flex-start; /* Alinear el botón hacia abajo */
+    margin-top: 100px;
+    margin-left: 100px;
+    position: relative;
+}
+        .button {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            margin: 0; /* Eliminar el margen para que esté más al centro */
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            line-height: 50px;
+            font-weight: bold;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute; /* Posicionar el menú de forma absoluta */
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 5px; /* Espacio entre el botón y el menú */
+            left: 0; /* Alinear el menú a la izquierda */
+            top: 100%; /* Ubicar el menú debajo del botón */
+            width: 175px; /* Establecer un ancho fijo para el menú */
+        }
+        .dropdown-menu a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+        }
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
+        }
+        #invoice-list {
+            display: none;
+            position: absolute; /* Posicionar el menú de forma absoluta */
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 5px; /* Espacio entre el botón y el menú */
+            right: 66%; /* Alinear el menú a la izquierda */
+            top: 32%; /* Ubicar el menú debajo del botón */
+            width: 175px; /* Establecer un ancho fijo para el menú */
+        }
+        #invoice-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #invoice-items li {
+            margin-bottom: 5px;
+        }
+
+        .facturas-button {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            margin-right: 10;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            line-height: 50px;
+            font-weight: bold;
+        }
+        .factura-info-container {
+            display: none;
+            position: absolute;
+            background-color: #4CAF50;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-left: 50%;
+            width: 400px;
+        }
+        .factura-info-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .factura-info-container p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .factura-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.factura-table th,
+.factura-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.factura-table th {
+    background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Clientes</h1>
+        <div class="button-container">
+            <button class="button" onclick="toggleDropdown()">Clientes</button>
+            <button class="facturas-button" onclick="toggleInvoiceList()">Números de facturas</button>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    {% for cliente in clientes %}
+                        <li><button onclick="showInvoices('{{ cliente[0] }}')">{{ cliente[0] }}</button></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+     <div id="invoice-list"> 
+        <div id="invoice-items"></div>
+    </div>
+        <div id="factura-info-container" class="factura-info-container">
+            <!-- Aquí se mostrarán los detalles de la factura -->
+        </div>
+
+   
+    </div>
+    <script>
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdown-menu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+        }
+        function toggleInvoiceList() {
+            var invoiceList = document.getElementById("invoice-list");
+            invoiceList.style.display = invoiceList.style.display === "none" ? "block" : "none";
+        }
+        function showInvoices(cliente) {
+    var invoiceList = document.getElementById("invoice-list");
+    var invoiceItems = document.getElementById("invoice-items");
+
+    // Llamar a la función en Python para obtener los números de factura asociados al proveedor seleccionado
+    fetch('/clientes_facturas?cliente=' + cliente)
+        .then(response => response.json())
+        .then(data => {
+            // Limpiar la lista anterior (si la hubiera)
+            invoiceItems.innerHTML = '';
+
+            // Agregar los números de factura como elementos de lista
+            var ul = document.createElement("ul"); // Crear una lista desordenada
+            data.invoices.forEach(invoice => {
+                var li = document.createElement("li"); // Crear un elemento de lista
+                li.style.textAlign = "left";
+                var button = document.createElement("button");
+                button.textContent = invoice;
+                button.onclick = function() {
+                    // Llamar a una función para mostrar la información de la factura
+                    showInvoiceInfo(invoice);
+                };
+                li.appendChild(button);
+                ul.appendChild(li);
+            });
+
+            // Mostrar la lista de números de factura
+            invoiceItems.appendChild(ul);
+            invoiceList.style.display = "block";
+        });
+}
+
+function showInvoiceInfo(numeroFactura) {
+    // Llamar a la función en Python para obtener los detalles de la factura
+    fetch('/clientes_facturas_info?numero_factura=' + numeroFactura)
+        .then(response => response.json())
+        .then(data => {
+            // Mostrar la información de la factura en la página, por ejemplo:
+            var facturaInfoContainer = document.getElementById("factura-info-container");
+            facturaInfoContainer.innerHTML = '';
+
+            var titulo = document.createElement("h2");
+            titulo.textContent = "Detalles de la factura n°" + numeroFactura;
+            facturaInfoContainer.appendChild(titulo);
+
+            // Crear la tabla
+            var tabla = document.createElement("table");
+            tabla.classList.add("factura-table");
+
+            // Crear la fila de encabezado de la tabla
+            var encabezado = document.createElement("tr");
+
+            // Crear las celdas de encabezado
+            var clienteEncabezado = document.createElement("th");
+            clienteEncabezado.textContent = "cliente";
+            encabezado.appendChild(clienteEncabezado);
+
+            var fechaEncabezado = document.createElement("th");
+            fechaEncabezado.textContent = "Fecha";
+            encabezado.appendChild(fechaEncabezado);
+
+            var utilidadEncabezado = document.createElement("th");
+            utilidadEncabezado.textContent = "Utilidad";
+            encabezado.appendChild(utilidadEncabezado);
+
+            tabla.appendChild(encabezado);
+
+            // Crear la fila de datos de la factura
+            var fila = document.createElement("tr");
+
+            // Crear las celdas de datos
+            var clienteCelda = document.createElement("td");
+            clienteCelda.textContent = data.cliente;
+            fila.appendChild(clienteCelda);
+
+            var fechaCelda = document.createElement("td");
+            fechaCelda.textContent = data.fecha;
+            fila.appendChild(fechaCelda);
+
+            var utilidadCelda = document.createElement("td");
+            utilidadCelda.textContent = data.utilidad;
+            fila.appendChild(utilidadCelda);
+
+            tabla.appendChild(fila);
+
+            facturaInfoContainer.appendChild(tabla);
+            facturaInfoContainer.style.display = "block";
+        });
+}
+
+    </script>
+</body>
+</html>

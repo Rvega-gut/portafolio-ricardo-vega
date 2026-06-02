@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Registro de Nuevos Clientes</h1>
+<div class="row">
+    <div class="col-md-5">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages%}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="card card-body">
+            <form action="/anadir_cliente" method="POST">
+                <div class="form-group">
+                    <input type="text" name="RUT_Cliente" placeholder="RUT del cliente" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Nombre_Cliente" placeholder="Nombre del cliente" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Dirección_Cliente" placeholder="Dirección del cliente" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Teléfono_Cliente" placeholder="Teléfono del cliente" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="sumbit" class="btn btn-primary btn-block">
+                        Añadir
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

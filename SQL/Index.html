@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<body>
+  <style>
+    .small-image {
+      width: 680px; /* Tamaño deseado */
+      height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    }
+  </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var horaActual = new Date().getHours();
+        var saludo;
+  
+        if (horaActual >= 6 && horaActual < 12) {
+          saludo = "Buenos días";
+        } else if (horaActual >= 12 && horaActual < 19) {
+          saludo = "Buenas tardes";
+        } else {
+          saludo = "Buenas noches";
+        }
+  
+        document.getElementById("saludo").textContent = saludo;
+      });
+    </script>
+    
+  <div class="company-logo center-image">
+    <h1>¡<span id="saludo"></span>!</h1>
+    <img src="https://www.lectura-specs.es/models/renamed/orig/cargadoras-de-ruedas-lw300kn-xcmg.jpg" alt="Logo de Persevera SpA" class="small-image">
+    <h1>Bienvenido a la aplicación web de Comercial Persevera</h1>
+    <h5>Utilice la barra superior para acceder a las diferentes funcionalidades.</h5>
+  </div>
+</body>
+{% endblock %}
