@@ -2,6 +2,8 @@
 
 Proyecto universitario desarrollado en equipo para el curso de Sistemas de Computación. Se trata de una aplicación web para gestionar compras, ventas, proveedores, clientes e inventario de una empresa comercial. Desarrollada para reemplazar el seguimiento manual en planillas por una interfaz dinámica y filtrable conectada a una base de datos relacional.
 
+El archivo web.py contiene la lógica del servidor y las rutas Flask — cada endpoint consulta la base de datos y renderiza su template HTML correspondiente.
+
 # Instalación 
 
 Usar el gestor de paquetes pip para instalar las dependencias. Ajustar los datos de conexión en web.py si es necesario
