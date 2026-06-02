@@ -25,3 +25,10 @@ Integración de múltiples fuentes, creación de medidas DAX y diseño de tres p
 **Predicción de reinserción hospitalaria en pacientes con diabetes**  
 Análisis exploratorio y modelo predictivo sobre el dataset *Diabetes 130-US Hospitals* (UCI Machine Learning Repository). Incluye limpieza de datos, transformación de variables, selección estadística de features y comparación de modelos de clasificación (Random Forest, Regresión Logística, Naive Bayes).  
 📎 [Ver notebook](https://github.com/Rvega-gut/portafolio-ricardo-vega/blob/main/Python/Reingresión%20Hospitalaria.ipynb)
+
+---
+
+## 🗄️ SQL
+**Persevera – Aplicación web de gestión de facturas**
+Sistema de consulta y registro de facturas, proveedores, clientes e inventario, conectado a una base de datos MySQL mediante Flask.
+📁 [Ver proyecto](https://github.com/Rvega-gut/portafolio-ricardo-vega/tree/main/persevera-sql)
